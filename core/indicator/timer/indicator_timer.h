@@ -1,5 +1,5 @@
-#ifndef __DISPLAY_TIMER_H
-#define __DISPLAY_TIMER_H
+#ifndef __INDICATOR_TIMER_H
+#define __INDICATOR_TIMER_H
 
 
 #include <stm32f1xx.h>
@@ -10,7 +10,7 @@
 #define TIMER_Disable() TIM2->CR1 &= ~TIM_CR1_CEN       /*Counter disabled*/
 
 
-void display_timer_init(uint16_t prs, uint16_t cntt);
+void indicator_timer_init(uint16_t prs, uint16_t cntt);
 
 
-#endif  /*__DISPLAY_TIMER_H*/
+#endif  /*__INDICATOR_TIMER_H*/

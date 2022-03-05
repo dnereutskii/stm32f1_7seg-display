@@ -1,4 +1,4 @@
-#include "display_gpio.h"
+#include "indicator_gpio.h"
 
 
 /*
@@ -16,7 +16,7 @@
  * PA10 - digit 3
  * PA11 - digit 4
  */
-void display_gpio_init()
+void indicator_gpio_init()
 {
     RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
     GPIOA->CRL |= GPIO_CRL_MODE0_0|\

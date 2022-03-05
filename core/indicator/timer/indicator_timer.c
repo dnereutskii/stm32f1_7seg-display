@@ -1,7 +1,7 @@
-#include "display_timer.h"
+#include "indicator_timer.h"
 
 
-void display_timer_init(uint16_t prs, uint16_t cntt)
+void indicator_timer_init(uint16_t prs, uint16_t cntt)
 {
     RCC->APB1ENR |= RCC_APB1ENR_TIM2EN;     /*timer 2 clock enabled*/
     NVIC_EnableIRQ(TIM2_IRQn);              /*global interrupt for timer 2*/
