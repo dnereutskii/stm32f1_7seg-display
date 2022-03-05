@@ -4,9 +4,9 @@
 # list of source files
 SOURCES  = core/main.c
 SOURCES += cmsis/src/system_stm32f1xx.c
-SOURCES += core/display/display.c
-SOURCES += core/display/gpio/display_gpio.c
-SOURCES += core/display/timer/display_timer.c
+SOURCES += core/indicator/indicator.c
+SOURCES += core/indicator/gpio/indicator_gpio.c
+SOURCES += core/indicator/timer/indicator_timer.c
 
 # add startup file to build
 SOURCES += ./startup/startup_stm32f103xb.s
@@ -33,9 +33,9 @@ CFLAGS += -DSTM32F10X_MD
 CFLAGS += -Wl,--gc-sections
 CFLAGS += -I.
 CFLAGS += -I ./cmsis/inc/
-CFLAGS += -I ./core/display/
-CFLAGS += -I ./core/display/gpio
-CFLAGS += -I ./core/display/timer
+CFLAGS += -I ./core/indicator/
+CFLAGS += -I ./core/indicator/gpio
+CFLAGS += -I ./core/indicator/timer
 
 OBJS = $(SOURCES:.c=.o)
 

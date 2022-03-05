@@ -1,5 +1,5 @@
 #include <stm32f1xx.h>
-#include "display.h"
+#include "indicator.h"
 
 
 #define SYSCLOCK 72000000U
@@ -32,11 +32,11 @@ int main()
     swd_init();
     led_init();
     systick_init();
-    display_init();
+    indicator_init();
 
     for(uint16_t cnt = 0U; cnt < 10000; cnt++)
     {
-        display_print_number(cnt);
+        indicator_print_number(cnt);
         delay_ms(100);
     }
     
